@@ -43,10 +43,10 @@ width: 50%;
 
 				
 				<table>
-				     
 				    <tr class="mmt">
 					     <td>First Name</td>
 					     <td >
+					     	<input type="hidden" value="<c:out value='${student.id}' />" class="form-control" name="id">
 							<input type="text" value="<c:out value='${student.firstName}' />" class="form-control" name="firstName" required="required">							
 					     </td>
 				    </tr>
@@ -70,20 +70,16 @@ width: 50%;
 				    </tr>
 				</table>
 				
-				<button type="submit" class="btn btn-success mmt w-75" >
-							   
+				<button type="submit" class="btn btn-success mmt w-75" >			   
 					<c:if test="${student != null}">
             			Update
             		</c:if>
 					<c:if test="${student == null}">
             			Add
-            		</c:if>	
-            				   
+            		</c:if>	    				   
 				</button>
 				
 				</form>
-
-
 	</div>
 </body>
 </html>

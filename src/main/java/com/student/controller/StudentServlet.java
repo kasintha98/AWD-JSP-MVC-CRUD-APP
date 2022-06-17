@@ -40,8 +40,8 @@ public class StudentServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/studentregister.jsp");
-		dispatcher.forward(request, response);
+		//RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/studentdetails.jsp");
+		//dispatcher.forward(request, response);
 		
 		this.doPost(request, response);
 
@@ -182,7 +182,6 @@ public class StudentServlet extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("id"));
 		studentDao.deleteStudent(id);
 		response.sendRedirect("list");
-
 	}
 	
 
